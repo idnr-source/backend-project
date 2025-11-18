@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitJourney - Register</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-50">
+
+  <div class="bg-white p-10 rounded-2xl shadow-xl w-96">
+    <h2 class="text-3xl font-bold text-center mb-6">Create Account</h2>
+
+    <input id="name" type="text" placeholder="Full Name"
+           class="border p-3 rounded w-full mb-4" />
+
+    <input id="email" type="email" placeholder="Email"
+           class="border p-3 rounded w-full mb-4" />
+
+    <input id="password" type="password" placeholder="Password"
+           class="border p-3 rounded w-full mb-4" />
+
+    <input id="confirmPassword" type="password" placeholder="Confirm Password"
+           class="border p-3 rounded w-full mb-6" />
+
+    <button id="registerBtn"
+      class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+      Register
+    </button>
+
+    <p class="text-center mt-4">
+      Sudah punya akun?
+      <a href="login.html" class="font-semibold text-blue-600">Login</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("registerBtn").onclick = () => {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+      if (!name || !email || !password || !confirmPassword) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      // Simulasi sukses (nanti diganti koneksi database)
+      localStorage.setItem("mockLogin", "true");
+      alert("Registration successful!");
+      window.location.href = "dashboard.html";
+    };
+  </script>
+
+</body>
+</html>

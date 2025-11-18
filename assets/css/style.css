@@ -1,0 +1,54 @@
+.medBtn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-xl font-semibold;
+}
+
+.medBtn:hover {
+  @apply bg-blue-700;
+}
+
+.planner-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.planner-card {
+  @apply bg-white shadow-md p-5 rounded-xl;
+}
+
+.planner-card h2 {
+  @apply font-bold text-lg mb-3;
+}
+
+.planner-card ul li {
+  @apply flex gap-2 items-center mb-1;
+}
+
+.planner-card input {
+  @apply w-4 h-4;
+}
+
+.medBtn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-xl font-semibold;
+}
+.medBtn:hover {
+  @apply bg-blue-700;
+}
+
+.planner-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.planner-card {
+  @apply bg-white shadow-md p-5 rounded-xl;
+}
+
+.planner-card h2 {
+  @apply font-bold text-lg mb-3;
+}
+
+.planner-card ul li {
+  @apply flex gap-2 items-center mb-1;
+}
+
+.planner-card input {
+  @apply w-4 h-4;
+}

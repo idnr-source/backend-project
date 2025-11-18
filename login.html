@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="flex justify-center items-center h-screen bg-gray-100">
+
+  <div class="bg-white p-10 rounded-2xl shadow-xl w-96">
+
+    <h2 class="text-3xl font-bold text-center mb-6">Login</h2>
+
+    <input id="email" type="email" placeholder="Email"
+           class="border p-3 rounded w-full mb-4">
+
+    <input id="password" type="password" placeholder="Password"
+           class="border p-3 rounded w-full mb-6">
+
+    <a id="loginBtn"
+       class="block text-center bg-blue-600 text-white py-3 rounded-xl font-semibold cursor-pointer">
+       Login
+    </a>
+
+    <p class="text-center mt-4">
+      Belum punya akun?
+      <a href="register.html" class="font-semibold text-blue-600">Daftar</a>
+    </p>
+
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

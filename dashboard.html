@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitJourney Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-gray-100">
+
+<script>
+if (!localStorage.getItem("mockLogin")) {
+  window.location.href = "login.html";
+}
+</script>
+
+<div class="flex h-screen overflow-hidden">
+
+  <!-- MOBILE TOP BAR -->
+  <header class="md:hidden fixed top-0 left-0 w-full bg-gray-900 text-white p-4 flex justify-between z-50">
+    <h1 class="font-bold text-xl">FitJourney</h1>
+    <button onclick="toggleSidebar()" class="text-2xl">☰</button>
+  </header>
+
+  <!-- SIDEBAR -->
+<aside id="sidebar"
+  class="fixed md:static top-0 left-0 h-full w-64 bg-gray-900 text-white p-6 space-y-4 transform -translate-x-full md:translate-x-0 transition-all duration-300 z-40 overflow-y-auto">
+
+  <h2 class="text-2xl font-bold hidden md:block">FitJourney</h2>
+
+  <button onclick="showPage('breathing')" class="block hover:text-blue-300">🧘‍♂️ Breathing Trainer</button>
+  <button onclick="showPage('meditation')" class="block hover:text-blue-300">☯ Meditation</button>
+  <button onclick="showPage('planner')" class="block hover:text-blue-300">📝 Planner</button>
+  <button onclick="showPage('goals')" class="block hover:text-blue-300">🎯 Goals</button>
+
+  <button class="mt-10 bg-red-500 px-4 py-2 rounded" onclick="logout()">Logout</button>
+</aside>
+
+  <!-- MOBILE BACKDROP -->
+  <div id="backdrop" class="fixed inset-0 bg-black/40 hidden md:hidden" onclick="toggleSidebar()"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 p-10 mt-14 md:mt-0 overflow-y-auto">
+    <h1 class="text-3xl font-bold" id="pageTitle">Welcome Back!</h1>
+    <div id="pageContainer" class="mt-8"></div>
+  </main>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="assets/js/breathing.js"></script>
+<script src="assets/js/meditation.js"></script>
+<script src="assets/js/planner.js"></script>
+<script src="assets/js/goals.js"></script>
+<script src="assets/js/dashboard.js"></script>
+
+</body>
+</html>
